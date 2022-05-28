@@ -1,0 +1,51 @@
+<!DOCTYPE html> 
+<html>
+<head> 
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" /> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<title>Hello, World</title> 
+<style type="text/css"> 
+html{height:100%} 
+body{height:100%;margin:0px;padding:0px} 
+#container{height:100%} 
+</style> 
+<script type="text/javascript" src="//api.map.baidu.com/api?type=webgl&v=1.0&ak=fAxzjsg4dKo6nYfGKGrBWLpcHPbf9Nc3"></script>
+</head> 
+  
+<body> 
+<div id="container"></div>
+
+<script type="text/javascript">
+	var map = new BMapGL.Map("container");    // 创建Map实例
+  
+// 创建地图实例 
+var point = new BMapGL.Point(115.03333, 30.213893);
+// 创建点坐标 
+map.centerAndZoom(point, 15);
+// 初始化地图，设置中心点坐标和地图级别 
+map.enableScrollWheelZoom(true); // 开启鼠标滚轮缩放
+var marker = new BMapGL.Marker(point);        // 创建标注    
+map.addOverlay(marker);                     // 将标注添加到地图中 
+
+map.centerAndZoom(new BMapGL.Point(115.03333, 30.213893), 11);  // 初始化地图,设置中心点坐标和地图级别
+marker.addEventListener("click", function(){    
+    alert("当前的位置是湖北理工学院");    
+});  
+
+/*标记可移动*/
+marker.enableDragging();    
+marker.addEventListener("dragend", function(e){    
+    alert("当前位置：" + e.point.lng + ", " + e.point.lat);    
+}) 
+
+/* 生成信息窗口 */
+var opts = {    
+    width : 250,     // 信息窗口宽度    
+    height: 100,     // 信息窗口高度    
+    title : "湖北理工学院"  // 信息窗口标题   
+}    
+var infoWindow = new BMapGL.InfoWindow("欢迎来到湖北理工学院！", opts);  // 创建信息窗口对象    
+map.openInfoWindow(infoWindow, map.getCenter());      // 打开信息窗口
+</script> 
+</body> 
+</html>
