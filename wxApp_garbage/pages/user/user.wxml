@@ -1,0 +1,76 @@
+
+
+<!--个人中心页面结构 -->
+<block wx:if="{{!hasUserInfo}}" class="btn_sections"><button bindtap="getUserProfile" class="login_btn">登录</button>
+</block>
+<block wx:else>
+  <view class="user_info_wrap">
+  <view class="user_imag_wrap"><image class="user_bg" src="{{userInfo.avatarUrl}}"></image>
+    <view class="user_info">
+      <image class="user_icon" src="{{userInfo.avatarUrl}}"></image>
+      <view class="user_name">{{userInfo.nickName}}</view>
+    </view>
+  </view>
+</view>
+
+<!--  -->
+
+<view class="user_content">
+<view class="user_main">
+<!--历史足迹 -->
+<view class="history_wrap">
+  <navigator>
+    <view class="his_num">334</view>
+    <view class="his_name">今日已收垃圾</view>
+  </navigator>
+  <navigator>
+    <view class="his_num">188</view>
+    <view class="his_name">可回收</view>
+  </navigator>
+  <navigator>
+    <view class="his_num">146</view>
+    <view class="his_name">不可回收</view>
+  </navigator>
+  <navigator>
+    <view class="his_num">10489</view>
+    <view class="his_name">本月已收集</view>
+  </navigator>
+</view>
+
+<!-- 我的订单 -->
+<view class="order_wrap">
+  <view class="order_content">
+
+  </view>
+</view>
+
+<!-- 收货地址管理 -->
+<view class="address_wrap">
+  垃圾收集地址：湖北省黄石市下陆区磁湖路湖北理工学院
+</view>
+
+<!-- 应用信息相关 --> 
+<view class="app_info_wrap">
+  <view class="app_info_item  app_info_contact"><text>联系QQ</text><text>2112946604</text>
+    </view>
+    <view class="app_info_item">意见反馈</view>
+      <view class="app_info_item">关于我们</view>    
+</view>
+  
+<!-- 推荐-->
+ <view class="recommend_wrap"> 把应用推荐给其他人</view>
+   
+<view>
+  
+</view>
+  
+  
+
+
+</view>
+</view>
+</block>
+
+
+
+

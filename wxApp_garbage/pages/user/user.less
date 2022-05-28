@@ -1,0 +1,131 @@
+page{
+background-color: #edece8;
+
+}
+
+.btn_sections{
+  height: 45vh;
+}
+
+
+.user_info_wrap {
+  height: 45vh;
+  /* background-color:var(--themeColor); */
+overflow: hidden;
+ 
+  .user_imag_wrap {
+    position: relative;
+    /* img.user_bg */
+    .user_bg {
+      height: 45vh;
+      filter: blur(10rpx);
+    }
+
+    .user_info {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 30%;
+      text-align: center;
+      .user_icon {
+  border-radius:50% ;
+  width: 150rpx;
+  height: 150rpx;
+      }
+
+      .user_name {
+  color: #fff;
+/*   font-size: 40rpx; */
+  margin-top: 40rpx;
+      }
+    }
+  }
+}
+
+
+
+
+.user_content{
+  position: relative;
+  .user_main{
+    color: #666;
+    padding-bottom: 100rpx;
+ position: absolute;
+ width: 98%;
+ left: 50%;
+ transform: translateX(-50%);
+ top: -40rpx;
+ //历史足迹
+ .history_wrap{
+   background-color: #fff;
+   display: flex;
+
+  navigator{
+    flex: 1;
+      text-align: center;
+ padding: 10rpx 0;
+    .his_num{
+   color: var(--themeColor);
+    }
+    .his_name{}
+  }
+ }
+
+ //我的订单
+ .order_wrap{
+   background-color: #fff;
+   motion-path: 30rpx;
+
+  .order_title{
+    padding: 20rpx;
+    border-bottom: 1rpx solid #ccc;
+
+  }
+  .order_content{
+    display: flex;
+
+    navigator{
+      padding: 15rpx 0;
+      flex: 1;
+      text-align: center;
+      .iconfont{
+        color: var(--themeColor);
+      }
+      .order_name{}
+    }
+  }
+ }
+
+
+
+ .address_wrap{
+margin-top: 30rpx;
+background-color: #fff;
+padding: 20rpx 0;
+}
+.app_info_wrap{ 
+  margin-top: 30rpx;
+background-color: #fff;
+.app_info_item{
+  padding: 20rpx 0;
+  border-bottom: solid 1rpx #ccc;
+}
+.app_info_contact{
+  display: flex;
+  justify-content: space-between;
+}
+
+}
+
+.recommend_wrap{
+  margin-top: 30rpx;
+  background-color: #fff;
+ padding: 20rpx 0;
+
+}
+  }
+ 
+}
+
+
+

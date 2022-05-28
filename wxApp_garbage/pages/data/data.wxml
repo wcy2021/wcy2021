@@ -1,0 +1,41 @@
+<!-- tab切换 -->
+<view class="tab">
+<view class="titles">
+<view class="btns" wx:for="{{btns}}" wx:key="btnsIndex"
+data-index="{{index}}" bindtap="change"
+class="{{index==active?'btns cur':'btns'}}"
+>{{item}}</view>
+</view>
+
+<view class="cons">
+<!-- 今日统计结果 -->
+<view class="btns cur"  class="{{0==active?'desc cur':'desc'}}">
+<!-- 今日图1 -->
+<view class="mychart">
+<ec-canvas id="myechart-demo" canvas-id="mycharts-demo" ec="{{ec}}"></ec-canvas>
+</view>
+
+</view>
+
+<!-- 昨日统计结果 -->
+<view class="desc" class="{{1==active?'desc cur':'desc'}}">
+  <view class="mychart2" wx:if="{{active==1}}">
+<ec-canvas id="myechart-demo2" canvas-id="mycharts-demo2" ec="{{ec2}}"></ec-canvas>
+</view>
+
+</view>
+<!-- 近7日统计结果 -->
+<view class="desc" class="{{2==active?'desc cur':'desc'}}">
+  <view class="mychart3" wx:if="{{active==2}}">
+<ec-canvas id="myechart-demo3" canvas-id="mycharts-demo3" ec="{{ec3}}"></ec-canvas>
+</view>
+</view>
+<!-- 近30日日统计结果 -->
+<view class="desc" class="{{3==active?'desc cur':'desc'}}">
+  <view class="mychart4" wx:if="{{active==3}}">
+<ec-canvas id="myechart-demo4" canvas-id="mycharts-demo4" ec="{{ec4}}"></ec-canvas>
+</view>
+</view>
+
+</view>
+</view>

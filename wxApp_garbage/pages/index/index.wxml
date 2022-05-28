@@ -1,0 +1,62 @@
+
+<SearchInput></SearchInput>
+
+<!-- swiper -->
+<view class="index_swiper">
+<swiper indicator-dots circular autoplay interval="1000">
+<swiper-item wx:for="{{swiperList}}" wx:key="swiper_id">
+<navigator>
+<image src="{{item.swiperImage}}"></image>
+</navigator>
+</swiper-item>
+</swiper>
+</view> 
+<!-- the swiper end -->
+
+<!-- nav icons start  -->
+<view class="icon_all">
+<navigator wx:for="{{nav_icon}}" wx:key="icon_id">
+<image src="{{item.icon_index}}" mode="widthFix">
+</image>
+</navigator>
+</view>
+
+
+<!-- floor start -->
+<view class="index_floor">
+    <view class="floor_group">
+
+      <!--floorのtitle -->
+      <view class="floor_title">
+      <view class="floor_title">
+      {{floorText1}}</view>
+      </view>
+      <!--floorのcontent  -->
+      <view class="floor_list" >
+      <navigator wx:for="{{floor}}" wx:key="floor_id">
+       <image src="{{item.floorImage}}" mode="widthFix">
+       </image></navigator>
+      </view>
+
+    </view>
+  </view>
+
+
+  <view class="index_floor">
+    <view class="floor_group">
+
+      <!--floorのtitle -->
+      <view class="floor_title">
+      <view class="floor_title">
+      {{floorText2}}</view>
+      </view>
+      <!--floorのcontent  -->
+      <view class="floor_list" >
+      <navigator wx:for="{{floor2}}" wx:key="floor_id">
+       <image src="{{item.floorImage}}" mode="widthFix">
+       </image></navigator>
+      </view>
+
+    </view>
+  </view>
+  
